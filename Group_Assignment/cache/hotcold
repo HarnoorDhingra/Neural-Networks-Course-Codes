@@ -1,0 +1,25 @@
+digraph {
+	graph [rankdir=LR]
+	subgraph cluster_10 {
+		color=blue
+		subgraph cluster0_inp {
+			color=gray rank=same
+			x01 [label="hot_input = 0" fillcolor=gray rank=same style=filled]
+			x02 [label="cold_input = 1" fillcolor=gray rank=same style=filled]
+		}
+		z01 [label=z01]
+		z02 [label=z02]
+		x02 -> z01 [label="w = -1"]
+		x02 -> z02 [label="w = 2"]
+		z02 -> z01 [label="w = 2"]
+		subgraph cluster0_opt {
+			color=gray rank=same
+			y01 [label="hot = 0" fillcolor=red style=filled]
+			y02 [label="cold = 1" fillcolor=green style=filled]
+		}
+		x01 -> y01 [label="w = 2"]
+		z01 -> y01 [label="w = 2"]
+		x02 -> y02 [label="w = 1"]
+		z02 -> y02 [label="w = 1"]
+	}
+}

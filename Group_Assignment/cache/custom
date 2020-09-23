@@ -1,0 +1,43 @@
+digraph {
+	graph [rankdir=LR]
+	subgraph cluster_0 {
+		color=blue
+		x01 [label="x1 = 0" fillcolor=gray style=filled]
+		x02 [label="x2 = 0" fillcolor=gray style=filled]
+		i0 [label="∑"]
+		x01 -> i0 [label="w1 = 2"]
+		x02 -> i0 [label="w2 = 2"]
+		y0 [label=0 fillcolor=red style=filled]
+		i0 -> y0 [label="θ = 1"]
+	}
+	subgraph cluster_1 {
+		color=blue
+		x11 [label="x1 = 0" fillcolor=gray style=filled]
+		x12 [label="x2 = 1" fillcolor=gray style=filled]
+		i1 [label="∑"]
+		x11 -> i1 [label="w1 = 2"]
+		x12 -> i1 [label="w2 = 2"]
+		y1 [label=1 fillcolor=green style=filled]
+		i1 -> y1 [label="θ = 1"]
+	}
+	subgraph cluster_2 {
+		color=blue
+		x21 [label="x1 = 1" fillcolor=gray style=filled]
+		x22 [label="x2 = 0" fillcolor=gray style=filled]
+		i2 [label="∑"]
+		x21 -> i2 [label="w1 = 2"]
+		x22 -> i2 [label="w2 = 2"]
+		y2 [label=1 fillcolor=green style=filled]
+		i2 -> y2 [label="θ = 1"]
+	}
+	subgraph cluster_3 {
+		color=blue
+		x31 [label="x1 = 1" fillcolor=gray style=filled]
+		x32 [label="x2 = 1" fillcolor=gray style=filled]
+		i3 [label="∑"]
+		x31 -> i3 [label="w1 = 2"]
+		x32 -> i3 [label="w2 = 2"]
+		y3 [label=1 fillcolor=green style=filled]
+		i3 -> y3 [label="θ = 1"]
+	}
+}

@@ -1,0 +1,67 @@
+digraph {
+	graph [rankdir=LR]
+	subgraph cluster_0 {
+		color=blue
+		x01 [label="x1 = 0" fillcolor=gray style=filled]
+		x02 [label="x2 = 0" fillcolor=gray style=filled]
+		z01 [label=z1 fillcolor=gray style=filled]
+		z02 [label=z2 fillcolor=gray style=filled]
+		i0 [label="∑"]
+		x01 -> z01 [label="w1 = 2"]
+		x01 -> z02 [label="w2 = -1"]
+		x02 -> z01 [label="w3 = -1"]
+		x02 -> z02 [label="w4 = 2"]
+		z01 -> i0 [label="w5 = 2"]
+		z02 -> i0 [label="w6 = 2"]
+		y0 [label=0 fillcolor=red style=filled]
+		i0 -> y0 [label="θ = 2"]
+	}
+	subgraph cluster_1 {
+		color=blue
+		x11 [label="x1 = 0" fillcolor=gray style=filled]
+		x12 [label="x2 = 1" fillcolor=gray style=filled]
+		z11 [label=z1 fillcolor=gray style=filled]
+		z12 [label=z2 fillcolor=gray style=filled]
+		i1 [label="∑"]
+		x11 -> z11 [label="w1 = 2"]
+		x11 -> z12 [label="w2 = -1"]
+		x12 -> z11 [label="w3 = -1"]
+		x12 -> z12 [label="w4 = 2"]
+		z11 -> i1 [label="w5 = 2"]
+		z12 -> i1 [label="w6 = 2"]
+		y1 [label=1 fillcolor=green style=filled]
+		i1 -> y1 [label="θ = 2"]
+	}
+	subgraph cluster_2 {
+		color=blue
+		x21 [label="x1 = 1" fillcolor=gray style=filled]
+		x22 [label="x2 = 0" fillcolor=gray style=filled]
+		z21 [label=z1 fillcolor=gray style=filled]
+		z22 [label=z2 fillcolor=gray style=filled]
+		i2 [label="∑"]
+		x21 -> z21 [label="w1 = 2"]
+		x21 -> z22 [label="w2 = -1"]
+		x22 -> z21 [label="w3 = -1"]
+		x22 -> z22 [label="w4 = 2"]
+		z21 -> i2 [label="w5 = 2"]
+		z22 -> i2 [label="w6 = 2"]
+		y2 [label=1 fillcolor=green style=filled]
+		i2 -> y2 [label="θ = 2"]
+	}
+	subgraph cluster_3 {
+		color=blue
+		x31 [label="x1 = 1" fillcolor=gray style=filled]
+		x32 [label="x2 = 1" fillcolor=gray style=filled]
+		z31 [label=z1 fillcolor=gray style=filled]
+		z32 [label=z2 fillcolor=gray style=filled]
+		i3 [label="∑"]
+		x31 -> z31 [label="w1 = 2"]
+		x31 -> z32 [label="w2 = -1"]
+		x32 -> z31 [label="w3 = -1"]
+		x32 -> z32 [label="w4 = 2"]
+		z31 -> i3 [label="w5 = 2"]
+		z32 -> i3 [label="w6 = 2"]
+		y3 [label=0 fillcolor=red style=filled]
+		i3 -> y3 [label="θ = 2"]
+	}
+}
